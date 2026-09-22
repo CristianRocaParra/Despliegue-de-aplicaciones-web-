@@ -1,11 +1,11 @@
 ## Qué he aprendido
-Nada   
+He aprendido los conocimientos básico de markdown y a manejar github.  
 
 ## Qué no entiendo  
-Nada  
+De momento lo entiendo todo
 
 ## Qué es lo que más me ha gustado y qué es lo que menos
-Lo que más me ha gustado es nada y lo que menos me ha gustado es todo  
+Lo que más me ha gustado es la gran utilidad de los repositorios para compartir información, lo que menos es que todavía me cuesta manejarme con github
 
 ## Qué más me gustaría saber relacionado con la Unidad 
-Nada  
+Me gustaría aprender a manejar los repositorios de forma local con git 
