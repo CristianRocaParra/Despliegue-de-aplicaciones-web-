@@ -1,7 +1,96 @@
-# Apache: Configuración (cuerpo de la memoria)
+# Instalación y configuración de un servidor web Apache en Ubuntu
 
-> Esta parte continúa el documento de Introducción. Sigue los pasos 3, 4 y 5 del tutorial de Ubuntu y añade un tutorial adicional (aquí: **control de acceso**).
-> Sustituye los datos entre corchetes `[...]` por los tuyos.
+**Autor/a:** [Cristian Roca Parra]
+**Curso / Módulo:** [2º DAW – Despliegue de Aplicaciones Web]
+**Fecha:** [10/11/2026]
+
+---
+
+## Resumen
+
+> *En este trabajo se documenta la instalación y configuración del servidor web Apache2 sobre Ubuntu 24.04.5.1. Se ha creado un sitio web personalizado, se ha configurado un VirtualHost propio y se ha habilitado mediante `a2ensite`. Además, se ha puesto en práctica un tutorial adicional sobre [control de acceso]. Cada fase se ha verificado con un banco de pruebas, incluyendo pruebas desde otro equipo realizadas por un compañero. Los resultados obtenidos han sido [Prueba desde otro ordenador](#28-prueba-desde-otro-ordenador) y los principales problemas encontrados fueron [Presentación y valoración de resultados](#3-presentación-y-valoración-de-resultados). Como conclusión, [Conclusión](#4-conclusión).*
+
+## Palabras clave
+
+`Apache2` · `Ubuntu` · `Servidor web` · `VirtualHost` · `HTTP` · `Control de acceso` · `Configuración` · `Linux`
+
+## Índice
+
+1. [Introducción](#1-introducción)
+   1. [Contexto](#11-contexto)
+   2. [Entorno utilizado: Apache](#12-entorno-utilizado-apache)
+   3. [Alternativas](#13-alternativas)
+   4. [Motivación](#14-motivación)
+2. [Relación de actividades realizadas](#2-relación-de-actividades-realizadas)
+3. [Presentación y valoración de resultados](#3-presentación-y-valoración-de-resultados)
+4. [Conclusión](#4-conclusión)
+5. [Bibliografía](#5-bibliografía)
+6. [Anexos](#6-anexos)
+
+---
+
+## 1. Introducción
+
+### 1.1. Contexto
+
+El proyecto se realiza en el instituto IES Juan Bosco, dentro del módulo de Despliegue de aplicaciones web del ciclo 2ºDAW. El trabajo se desarrolla de forma individual en una máquina virtual con las siguientes características:
+
+| Parámetro | Configuración |
+|---|---|
+| Sistema operativo | Ubuntu Server/Desktop 24.04.5.1 LTS |
+| Hipervisor | Oracle VirtualBox |
+| RAM / CPU / Disco | 10 GB / 3 vCPU / 100 GB |
+| Red | Adaptador puente |
+| IP de la máquina | 192.168.1.141 |
+
+![Imagen version](imagenes/version_ubuntu.png)
+
+![Imagen ip](imagenes/ip.png)
+
+### 1.2. Entorno utilizado: Apache
+
+**¿Qué es?** Apache HTTP Server (o simplemente *Apache*) es un servidor web de código abierto y multiplataforma. Su función es recibir peticiones HTTP/HTTPS de los clientes (navegadores) y responder con el contenido solicitado: páginas HTML, imágenes, archivos o resultados de aplicaciones dinámicas (PHP, Python, etc.).
+
+**¿Para qué sirve?**
+- Alojar sitios web estáticos y dinámicos.
+- Servir varios sitios en un mismo servidor mediante *VirtualHosts*.
+- Controlar el acceso a recursos (autenticación, restricciones por IP).
+- Ampliar funcionalidades mediante módulos (SSL, reescritura de URLs, proxy, etc.).
+
+**Historia (resumen):**
+- **1995:** nace a partir del servidor NCSA HTTPd, mantenido mediante parches aportados por una comunidad de desarrolladores.
+- **1999:** se funda la *Apache Software Foundation* para dar soporte legal y organizativo al proyecto.
+- **Años posteriores:** durante mucho tiempo fue el servidor web más utilizado del mundo. La rama actual es la **2.4**.
+
+
+### 1.3. Alternativas
+
+| Alternativa | Breve descripción |
+|---|---|
+| **Nginx** | Servidor web y proxy inverso muy ligero y eficiente con muchas conexiones simultáneas. |
+| **LiteSpeed** | Servidor de alto rendimiento, compatible con la configuración de Apache; versión gratuita (OpenLiteSpeed) y de pago. |
+| **Caddy** | Servidor moderno con HTTPS automático y configuración muy sencilla. |
+| **Microsoft IIS** | Servidor web de Microsoft para Windows Server. |
+| **Lighttpd** | Servidor muy ligero, pensado para sistemas con pocos recursos. |
+
+### 1.4. Motivación
+
+El objetivo de este proyecto es aprender a instalar y administrar un servidor web real, ya que es una competencia básica en el despliegue de aplicaciones web. Concretamente, se pretende:
+
+- Instalar Apache2 en Ubuntu y comprobar que funciona correctamente.
+- Crear un sitio web personalizado y publicarlo mediante un VirtualHost propio.
+- Ampliar conocimientos aplicando un tutorial adicional (control de acceso).
+- Documentar todo el proceso, incluyendo los errores encontrados, de forma que pueda reproducirse.
+
+---
+
+## Bibliografía
+
+- Apache Software Foundation. *Apache HTTP Server Project*. https://httpd.apache.org/ *(consultado el 22/11/2026)*
+- Canonical. *Install and configure Apache*. https://ubuntu.com/tutorials/install-and-configure-apache *(consultado el 22/11/2026)*
+
+
+# Apache: Configuración (cuerpo de la memoria)
 
 ---
 
@@ -217,8 +306,6 @@ Durante la configuración de Apache pueden aparecer diferentes problemas. En la 
 | No aparece la solicitud de contraseña | Error en la configuración de autenticación | Revisar el bloque `<Directory>` y el archivo `.htpasswd`. |
 | Un compañero no puede acceder | Problemas de red o firewall | Revisar la configuración de red de la máquina virtual. |
 
-Se anotarán los errores que hayan aparecido realmente durante la práctica y las soluciones aplicadas.
-
 Sin modificar el archivo etc/hosts al poner la url nos daba este error:
 
 ![etc_hosts](./imagenes/tuto7.png)
@@ -368,17 +455,15 @@ Con esta práctica se han adquirido conocimientos sobre la instalación, configu
 
 ---
 
-## Bibliografía
+## 5. Bibliografía
 
 - Canonical. *Install and configure Apache*. https://ubuntu.com/tutorials/install-and-configure-apache
 - Apache Software Foundation. *Authentication, Authorization and Access Control*. https://httpd.apache.org/docs/2.4/howto/auth.html
 - Apache Software Foundation. *Authentication and Authorization*. https://httpd.apache.org/docs/2.4/howto/auth.html
-- [Añadir otros tutoriales o páginas web consultadas, indicando título, autor y URL].
-- Fecha de consulta: [añadir fecha].
 
 ---
 
-## Anexos
+## 6. Anexos
 
 En este apartado se incluye información adicional que puede resultar útil para comprender la configuración realizada.
 
