@@ -11,7 +11,7 @@ La entrega está organizada de la siguiente manera:
 ```text
 Entrega_Documentacion/
 ├── README.md
-├── Comparativa_y_reflexion.docx
+├── Comparativa_y_reflexion.md
 └── Proyecto_PHP/
     ├── index.php
     ├── funciones.php
@@ -25,7 +25,7 @@ Entrega_Documentacion/
 ## 3. ¿Qué contiene cada archivo?
 
 - **`README.md`**: archivo principal que explica la organización y el contenido de la entrega.
-- **`Comparativa_y_reflexion.docx`**: documento con la comparación de las herramientas Javadoc, Doxygen y phpDocumentor, además de la reflexión final.
+- **`Comparativa_y_reflexion.md`**: documento con la comparación de las herramientas Javadoc, Doxygen y phpDocumentor, además de la reflexión final.
 - **`Proyecto_PHP/index.php`**: página principal de la calculadora, donde se utilizan las funciones matemáticas.
 - **`Proyecto_PHP/funciones.php`**: contiene las funciones para sumar, restar, multiplicar y dividir, documentadas mediante comentarios PHPDoc.
 - **`Proyecto_PHP/documentacion.md`**: documentación en formato Markdown de las funciones de la calculadora.
