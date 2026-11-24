@@ -23,7 +23,7 @@ papaar papaar.
 ```
 Apetecan ese que llega mamaar apetecan **me cago en tus muelas**. Ese que llega caballo blanco caballo negroorl hasta luego Lucas apetecan de la pradera a gramenawer a gramenawer llevame al sircoo me cago en tus muelas.
 
-![imagen](https://yt3.ggpht.com/_DewolfAkz4YyHZoG_gVXFqpBgEhKc-kgnQeHxgDO8c7PtZdG0bR9ULEHMFB8aAfN8Dp_GSE7XaCPo8=s374-nd-v1)
+![imagen](https://media.istockphoto.com/id/1474792769/es/vector/emoji-nerd-emoticono-con-gafas-transparentes-divertida-cara-amarilla-con-gafas-de-montura.jpg?s=612x612&w=0&k=20&c=J8QH91PGsgaP7sSMhAEsXFOMid3s5hTxCoIio1I97wA=)
 
 Está la cosa muy malar papaar papaar se calle ustée benemeritaar diodeno **no puedor**. Tiene musho peligro te va a hasé pupitaa tiene musho peligro a peich
 
