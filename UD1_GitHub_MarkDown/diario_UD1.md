@@ -8,5 +8,5 @@ De momento lo entiendo todo.
 Lo que más me ha gustado es descubrir la gran utilidad de los repositorios para compartir información. 
 Lo que menos es que todavía me cuesta manejarme con github.
 
-## Qué más me gustaría saber relacionado con la Unidad 
+## Qué más me gustaría saber relacionado con la unidad 
 Me gustaría aprender a manejar los repositorios de forma local con git.
